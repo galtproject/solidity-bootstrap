@@ -17,3 +17,12 @@
 * `make ganache` - run local pre-configured ganache
 
 For more information check out `Makefile`
+
+## Tests
+
+Includes test runner configuration for the following CI services:
+
+* GitHub Actions
+* GitLab CI
+* Travis CI
+
