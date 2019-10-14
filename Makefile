@@ -6,7 +6,7 @@ cleanup:
 compile: cleanup
 	npm run compile
 	node scripts/logContractSizes.js
-	tput bel
+	-tput bel
 
 lint:
 	npm run ethlint
@@ -14,15 +14,15 @@ lint:
 
 test:
 	-npm test
-	tput bel
+	-tput bel
 
 deploy:
 	-npm run deploy
-	tput bel
+	-tput bel
 
 coverage:
 	-npm run coverage
-	tput bel
+	-tput bel
 
 ganache:
 	bash ./scripts/runGanache.sh
