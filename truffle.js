@@ -5,6 +5,7 @@ const config = {
     local: {
       host: '127.0.0.1',
       port: 8545,
+      gasLimit: 8700000,
       network_id: '*'
     },
     test: {
@@ -15,10 +16,10 @@ const config = {
         debug: true,
         vmErrorsOnRPCResponse: true,
         default_balance_ether: 5000000,
-        // 7 800 000
-        gasLimit: 0x7704c0
+        gasLimit: 8700000
       }),
       skipDryRun: true,
+      gasLimit: 8700000,
       network_id: '*'
     }
   },
