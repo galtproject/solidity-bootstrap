@@ -19,4 +19,4 @@ jobs:
     - name: Run tests
       run: |
         npm install
-        make lint && make compile && make test
+        make lint && make compile && npm run test
