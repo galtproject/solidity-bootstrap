@@ -1,44 +1,32 @@
-const Ganache = require('ganache-core');
+const coverage = process.env.OZ_TEST_ENV_COVERAGE !== undefined;
 
 const config = {
   networks: {
     local: {
       host: '127.0.0.1',
       port: 8545,
-      gasLimit: 8700000,
-      network_id: '*'
+      gasLimit: 9700000,
+      network_id: '*',
     },
-    test: {
-      // https://github.com/trufflesuite/ganache-core#usage
-      provider: Ganache.provider({
-        unlocked_accounts: [0, 1, 2, 3, 4, 5],
-        total_accounts: 30,
-        debug: true,
-        vmErrorsOnRPCResponse: true,
-        default_balance_ether: 5000000,
-        gasLimit: 8700000
-      }),
-      skipDryRun: true,
-      gasLimit: 8700000,
-      network_id: '*'
-    }
+    coverage: {
+      host: '127.0.0.1',
+      port: 8555,
+      gasLimit: 9600000,
+      network_id: '*',
+    },
   },
   compilers: {
     solc: {
       version: 'native',
       settings: {
         optimizer: {
-          enabled: true,
-          runs: 200
-        }
+          enabled: !coverage,
+          runs: coverage ? 0 : 200,
+        },
       },
-      evmVersion: 'petersburg'
-    }
-  }
+      evmVersion: coverage ? 'petersburg' : 'istanbul',
+    },
+  },
 };
-
-if (process.env.SOLIDITY_COVERAGE === 'yes') {
-  delete config.networks.test;
-}
 
 module.exports = config;
