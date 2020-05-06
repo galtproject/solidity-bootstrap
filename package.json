@@ -19,15 +19,24 @@
   "engines": {
     "node": "^10.15.3"
   },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts"
+  ],
   "repository": "https://github.com/galtproject/solidity-bootstrap",
   "scripts": {
     "test": "truffle test --network test",
     "compile": "truffle compile",
     "deploy": "truffle migrate --network local",
-    "coverage": "SOLIDITY_COVERAGE=yes solidity-coverage",
-    "eslint": "eslint .",
-    "ethlint": "solium --dir ."
+    "coverage": "SOLIDITY_COVERAGE=yes scripts/coverage.sh",
+    "format:js": "prettier --write \"./**/*.js\"",
+    "format:sol": "prettier --write \"contracts/**/*.sol\"",
+    "lint:js": "eslint .",
+    "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\""
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }

@@ -3,7 +3,7 @@ const Table = require('cli-table');
 
 const table = new Table({
   head: ['Contract', 'Size (bytes)'],
-  colWidths: [50, 15]
+  colWidths: [50, 15],
 });
 
 const testFolder = './build/contracts/';

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-ganache-cli \
+node ./node_modules/ganache-cli/cli.js \
     -a 30 \
     -e 50000000 \
-    -l 8700000 \
+    -l 9700000 \
     -p 8545 \
     -v
