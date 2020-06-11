@@ -39,8 +39,8 @@ const loaderWrapper = {
   },
 };
 
-before(async function () {
-  loaderWrapper.contracts.forEach((contract) => {
+before(async function() {
+  loaderWrapper.contracts.forEach(contract => {
     contract.setProvider(provider);
     contract.defaults({
       from: testHelpers.defaultSender,

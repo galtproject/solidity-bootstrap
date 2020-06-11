@@ -1,5 +1,3 @@
-const coverage = process.env.OZ_TEST_ENV_COVERAGE !== undefined;
-
 const config = {
   networks: {
     local: {
