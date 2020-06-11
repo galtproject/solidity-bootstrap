@@ -18,4 +18,8 @@ module.exports = {
     gasLimit: 96000000, // Maximum gas per block
     gasPrice: 1e9, // Sets the default gas price for transactions if not otherwise specified.
   },
+
+  setupProvider: baseProvider => {
+    return baseProvider;
+  },
 };
