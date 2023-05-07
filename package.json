@@ -16,7 +16,7 @@
     "ganache-cli": "^6.9.1",
     "ganache-core": "^2.10.2",
     "lodash": "^4.17.15",
-    "mocha": "^7.1.2",
+    "mocha": "^10.2.0",
     "solhint": "^3.0.0",
     "solhint-plugin-prettier": "0.0.4",
     "solidity-coverage": "^0.7.5",
