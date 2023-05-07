@@ -20,7 +20,7 @@
     "solhint": "^3.0.0",
     "solhint-plugin-prettier": "0.0.4",
     "solidity-coverage": "^0.7.5",
-    "truffle": "^5.1.24",
+    "truffle": "^5.8.4",
     "web3": "^1.2.7"
   },
   "engines": {
